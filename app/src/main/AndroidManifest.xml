@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechnovatorsDiary">
         <activity
+            android:name=".activity_add_entry"
+            android:exported="false" />
+        <activity
             android:name=".ReviewInfo"
             android:exported="false" />
         <activity
