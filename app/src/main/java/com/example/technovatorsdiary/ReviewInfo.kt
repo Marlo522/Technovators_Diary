@@ -44,6 +44,7 @@ class ReviewInfo : AppCompatActivity() {
         binding.tvLastName.text = lastName
         binding.tvEmail.text = email
 
+
         binding.btnConfirm.setOnClickListener {
             if (email.isNotBlank() && password.isNotBlank()) {
                 auth.createUserWithEmailAndPassword(email, password)
