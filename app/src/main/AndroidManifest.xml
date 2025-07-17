@@ -15,6 +15,9 @@
             android:name=".activity_add_entry"
             android:exported="false" />
         <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
             android:name=".ReviewInfo"
             android:exported="false" />
         <activity
