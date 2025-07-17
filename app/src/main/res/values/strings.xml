@@ -18,4 +18,5 @@
     <string name="cnlastname">Last Name:</string>
     <string name="cnemail">Email:</string>
     <string name="confirm">Confirm</string>
+    <string name="title">Title</string>
 </resources>
