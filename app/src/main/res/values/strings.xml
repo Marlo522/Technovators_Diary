@@ -19,4 +19,5 @@
     <string name="cnemail">Email:</string>
     <string name="confirm">Confirm</string>
     <string name="title">Title</string>
+    <string name="mainentryhint">Write Your Thoughts</string>
 </resources>
