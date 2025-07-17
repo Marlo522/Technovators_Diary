@@ -27,36 +27,40 @@ class SignUp : AppCompatActivity() {
         }
 
         binding.btnSignUp.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("firstname", binding.etFirstName.text.toString())
-            bundle.putString("middlename", binding.etMiddleName.text.toString())
-            bundle.putString("lastname", binding.etLastName.text.toString())
-            bundle.putString("email", binding.etEmail.text.toString())
-            bundle.putString("password", binding.etPassword.text.toString())
+            val firstName = binding.etFirstName.text.toString()
+            val middleName = binding.etMiddleName.text.toString()
+            val lastName = binding.etLastName.text.toString()
+            var email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+            val confirmPassword = binding.etConfirmPassword.text.toString()
 
-            if (binding.etFirstName.text.isNullOrBlank() ||
-                binding.etMiddleName.text.isNullOrBlank() ||
-                binding.etLastName.text.isNullOrBlank() ||
-                binding.etEmail.text.isNullOrBlank() ||
-                binding.etPassword.text.isNullOrBlank() ||
-                binding.etConfirmPassword.text.isNullOrBlank()
-            ) {
-                Toast.makeText(
-                    this, "Please fill in all fields.",
-                    Toast.LENGTH_LONG
-                ).show()
+            // Append @email.com if not present
+            if (!email.endsWith("@email.com")) {
+                email += "@email.com"
             }
-            else {
-                if (binding.etPassword.text.toString() == binding.etConfirmPassword.text.toString()) {
-                    val intent = Intent(this, ReviewInfo::class.java)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(
-                        this, "Password does not match, please re-type your password.",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+
+            if (firstName.isBlank() ||
+                middleName.isBlank() ||
+                lastName.isBlank() ||
+                email.isBlank() ||
+                password.isBlank() ||
+                confirmPassword.isBlank()
+            ) {
+                Toast.makeText(this, "Please fill in all fields.", Toast.LENGTH_LONG).show()
+            } else if (password.length < 6) {
+                Toast.makeText(this, "Password must be at least 6 characters.", Toast.LENGTH_LONG).show()
+            } else if (password != confirmPassword) {
+                Toast.makeText(this, "Password does not match, please re-type your password.", Toast.LENGTH_LONG).show()
+            } else {
+                val bundle = Bundle()
+                bundle.putString("firstname", firstName)
+                bundle.putString("middlename", middleName)
+                bundle.putString("lastname", lastName)
+                bundle.putString("email", email)
+                bundle.putString("password", password)
+                val intent = Intent(this, ReviewInfo::class.java)
+                intent.putExtras(bundle)
+                startActivity(intent)
             }
         }
     }
