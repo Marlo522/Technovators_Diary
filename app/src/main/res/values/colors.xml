@@ -11,4 +11,8 @@
     <color name="lightbg">#E3DCD2</color>
     <color name="ctextfield">#CC8B65</color>
     <color name="cheader">#100C0D</color>
+    <color name="c4">#100C0D</color>
+    <color name="c1">#E3DCD2</color>
+    <color name="c2">#CC8B65</color>
+    <color name="c3">#013328</color>
 </resources>
