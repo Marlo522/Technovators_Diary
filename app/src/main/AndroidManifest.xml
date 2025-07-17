@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechnovatorsDiary">
         <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".FirstScreen"
             android:exported="true">
             <intent-filter>
