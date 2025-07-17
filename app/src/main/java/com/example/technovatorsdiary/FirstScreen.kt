@@ -21,7 +21,6 @@ class FirstScreen : AppCompatActivity() {
             insets
         }
         binding.btnContinue.setOnClickListener {
-
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
