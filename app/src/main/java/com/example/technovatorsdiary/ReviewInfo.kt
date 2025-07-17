@@ -35,5 +35,7 @@ class ReviewInfo : AppCompatActivity() {
             binding.tvEmail.text = bundle.getString("email")
         }
 
+        bind
+
     }
 }
