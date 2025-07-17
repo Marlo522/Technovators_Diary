@@ -9,6 +9,7 @@
     tools:context=".FirstScreen">
 
     <ImageView
+
         android:id="@+id/img_logo"
         android:layout_width="147dp"
         android:layout_height="166dp"
