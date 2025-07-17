@@ -152,12 +152,11 @@
 
     <ImageView
         android:id="@+id/btnback"
-        android:layout_width="37dp"
-        android:layout_height="33dp"
-        app:srcCompat="@drawable/back_button"
+        android:layout_width="85dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp" />
+        app:srcCompat="@drawable/back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
