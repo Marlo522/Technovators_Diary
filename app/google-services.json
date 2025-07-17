@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303924725674",
+    "project_id": "technovators-diary",
+    "storage_bucket": "technovators-diary.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303924725674:android:45b5baa68a88397a43cdd3",
+        "android_client_info": {
+          "package_name": "com.example.technovatorsdiary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB0kX8boybY92ul2CKEKDfKS9C6thQBM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
