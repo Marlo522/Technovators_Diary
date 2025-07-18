@@ -22,4 +22,10 @@
     <string name="let">Let\'s</string>
     <string name="create">Create</string>
     <string name="your">Your Account</string>
+    <string name="About">About</string>
+    <string name="Developer">Developer</string>
+    <string name="Carl">Carl</string>
+    <string name="Marlo">Marlo</string>
+    <string name="Dom">Dom</string>
+    <string name="mainentryhint">Enter your main entry here</string>
 </resources>
