@@ -46,7 +46,16 @@ class Login : AppCompatActivity() {
                     db.collection("users").document(uid).get()
                         .addOnSuccessListener { document ->
                             if (document.exists()) {
-                                Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+                                val firstName = document.getString("firstName") ?: ""
+                                val lastName = document.getString("lastName") ?: ""
+                                val emailDb = document.getString("email") ?: ""
+                                val intent = Intent(this, Sample::class.java)
+                                intent.putExtra("firstName", firstName)
+                                intent.putExtra("lastName", lastName)
+                                intent.putExtra("email", emailDb)
+                                startActivity(intent)
+                                finish()
+
                             } else {
                                 // User not in Firestore, sign out and show error
                                 auth.signOut()
@@ -59,7 +68,7 @@ class Login : AppCompatActivity() {
                         }
                 }
                 .addOnFailureListener {
-                    Toast.makeText(this, "Login failed: ${it.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show()
                 }
         }
     }

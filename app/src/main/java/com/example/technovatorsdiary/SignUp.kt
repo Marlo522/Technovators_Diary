@@ -28,19 +28,17 @@ class SignUp : AppCompatActivity() {
 
         binding.btnSignUp.setOnClickListener {
             val firstName = binding.etFirstName.text.toString()
-            val middleName = binding.etMiddleName.text.toString()
             val lastName = binding.etLastName.text.toString()
-            var email = binding.etEmail.text.toString()
+            var email = binding.etEmail.text.toString().trim()
             val password = binding.etPassword.text.toString()
             val confirmPassword = binding.etConfirmPassword.text.toString()
 
-            // Append @email.com if not present
-            if (!email.endsWith("@email.com")) {
-                email += "@email.com"
+
+            if (!email.contains("@")) {
+                email += "@yahoo.com"
             }
 
             if (firstName.isBlank() ||
-                middleName.isBlank() ||
                 lastName.isBlank() ||
                 email.isBlank() ||
                 password.isBlank() ||
@@ -54,7 +52,6 @@ class SignUp : AppCompatActivity() {
             } else {
                 val bundle = Bundle()
                 bundle.putString("firstname", firstName)
-                bundle.putString("middlename", middleName)
                 bundle.putString("lastname", lastName)
                 bundle.putString("email", email)
                 bundle.putString("password", password)

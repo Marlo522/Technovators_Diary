@@ -35,9 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ReviewDetails"
-        android:textColor="@color/cheader"
-        android:textSize="24sp"
-        android:fontFamily="@font/adlam_display"
+        android:textColor="@color/c4"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imlogin"/>
@@ -50,7 +50,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/open_sans_bold"
-        android:textColor="@color/cheader"
+        android:textColor="@color/c4"
         android:textSize="15sp"
         android:text="@string/cnfirstname"
         app:layout_constraintEnd_toStartOf="@+id/tvFirstName"
@@ -63,55 +63,38 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        android:textSize="17sp"
-        android:fontFamily=""
-        />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/open_sans_bold"
-        android:textColor="@color/cheader"
-        android:textSize="15sp"
-        android:text="@string/cnmiddlename"
-        app:layout_constraintEnd_toStartOf="@+id/tvMiddleName"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/tvMiddleName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        tools:layout_editor_absoluteY="284dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/open_sans_bold"
-        android:textColor="@color/cheader"
-        android:textSize="15sp"
         android:text="@string/cnlastname"
+        android:textColor="@color/c4"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/tvLastName"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/tvLastName"
@@ -121,19 +104,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"/>
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/open_sans_bold"
-        android:textColor="@color/cheader"
-        android:textSize="15sp"
         android:text="@string/cnemail"
+        android:textColor="@color/c4"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/tvEmail"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,22 +139,24 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/c4"
         android:elevation="4dp"
+        android:fontFamily="sans-serif"
         android:text="@string/confirm"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageView
         android:id="@+id/btnback"
-        android:layout_width="85dp"
-        android:layout_height="63dp"
-        app:srcCompat="@drawable/back_button"
+        android:layout_width="59dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp" />
+        app:srcCompat="@drawable/back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

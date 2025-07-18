@@ -34,13 +34,11 @@ class ReviewInfo : AppCompatActivity() {
 
         val bundle = intent.extras
         val firstName = bundle?.getString("firstname") ?: ""
-        val middleName = bundle?.getString("middlename") ?: ""
         val lastName = bundle?.getString("lastname") ?: ""
         val email = bundle?.getString("email") ?: ""
         val password = bundle?.getString("password") ?: ""
 
         binding.tvFirstName.text = firstName
-        binding.tvMiddleName.text = middleName
         binding.tvLastName.text = lastName
         binding.tvEmail.text = email
 
@@ -53,7 +51,6 @@ class ReviewInfo : AppCompatActivity() {
                         val userData = mapOf(
                             "uid" to uid,
                             "firstName" to firstName,
-                            "middleName" to middleName,
                             "lastName" to lastName,
                             "email" to email
                         )
@@ -64,11 +61,11 @@ class ReviewInfo : AppCompatActivity() {
                                 finish()
                             }
                             .addOnFailureListener { e ->
-                                Toast.makeText(this, "Error saving user data: ${e.message}", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "Error saving user data", Toast.LENGTH_LONG).show()
                             }
                     }
                     .addOnFailureListener { e ->
-                        Toast.makeText(this, "Sign Up Failed: ${e.message}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Sign Up Failed", Toast.LENGTH_LONG).show()
                     }
             }
         }
