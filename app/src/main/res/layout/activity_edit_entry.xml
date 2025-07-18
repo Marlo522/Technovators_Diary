@@ -29,8 +29,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Save"
         android:backgroundTint="@color/c4"
+        android:text="Save Edit"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvdate"
@@ -57,6 +58,7 @@
         android:layout_marginEnd="16dp"
         android:hint="@string/title"
         android:inputType="text"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,5 +80,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ettitle"
         android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:hint="@string/mainentryhint"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
