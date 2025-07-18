@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechnovatorsDiary">
         <activity
-            android:name=".Dashboard"
-            android:exported="false" />
-        <activity
-            android:name=".Profile"
+            android:name=".Sample"
             android:exported="false" />
         <activity
             android:name=".activity_add_entry"
