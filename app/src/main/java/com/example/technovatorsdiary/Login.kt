@@ -49,7 +49,7 @@ class Login : AppCompatActivity() {
                                 val firstName = document.getString("firstName") ?: ""
                                 val lastName = document.getString("lastName") ?: ""
                                 val emailDb = document.getString("email") ?: ""
-                                val intent = Intent(this, Sample::class.java)
+                                val intent = Intent(this, Dashboard::class.java)
                                 intent.putExtra("firstName", firstName)
                                 intent.putExtra("lastName", lastName)
                                 intent.putExtra("email", emailDb)
