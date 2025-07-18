@@ -20,28 +20,34 @@
         app:layout_constraintHeight_percent="0.45" /> <!-- Make height responsive, e.g., 45% of screen -->
 
     <!-- Login Image -->
-    <ImageView
-        android:id="@+id/imlogin"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/login_image"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintBottom_toTopOf="@+id/tvDiary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.7"
-        app:layout_constraintDimensionRatio="W,1:1" /> <!-- Maintain aspect ratio, adjust as needed -->
+    <!-- Maintain aspect ratio, adjust as needed -->
 
 
     <!-- App Name Title -->
+
+    <!-- Guideline for centering input fields and button -->
+    <ImageView
+        android:id="@+id/imlogin"
+        android:layout_width="280dp"
+        android:layout_height="278dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tvDiary"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.611"
+        app:layout_constraintWidth_percent="0.7"
+        app:srcCompat="@drawable/login_image" />
+
     <TextView
         android:id="@+id/tvDiary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/adlam_display"
         android:gravity="center"
         android:text="@string/app_name"
@@ -49,9 +55,9 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Guideline for centering input fields and button -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_center_vertical_content"
         android:layout_width="wrap_content"
@@ -75,26 +81,28 @@
 
 
     <!-- Username Input -->
+
+    <!-- Password Input -->
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:backgroundTint="@color/c2"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_margin"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/guideline_start_margin"
         app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="VisualLintTextFieldSize" />
 
-    <!-- Password Input -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="0dp"
@@ -168,8 +176,8 @@
         android:id="@+id/tvAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/about"
         android:textColor="@color/c2"
         android:textSize="14sp"
