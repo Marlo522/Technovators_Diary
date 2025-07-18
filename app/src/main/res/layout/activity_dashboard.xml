@@ -8,25 +8,24 @@
     tools:context=".Dashboard"
     android:background="@color/c1"
     >
-    <LinearLayout
-        android:id="@+id/header"
-        android:layout_width="0dp"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/app_logo"/>
-
+            android:src="@drawable/app_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/tvTechnovators"
@@ -36,21 +35,34 @@
             android:text="@string/app_name"
             android:textColor="@color/app_background"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="@id/logo"
+            app:layout_constraintBottom_toBottomOf="@id/logo"/>
 
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logo"
+            app:layout_constraintBottom_toBottomOf="@id/logo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/noteFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/noteFAB"
-        android:src="@drawable/add_icon"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="@color/c2"
+        android:contentDescription="@string/add"
+        android:src="@drawable/add_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/add"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
@@ -78,14 +90,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/profile_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/profile"
-        tools:layout_editor_absoluteX="355dp"
-        tools:layout_editor_absoluteY="16dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
