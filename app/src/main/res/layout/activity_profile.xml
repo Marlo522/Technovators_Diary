@@ -50,7 +50,7 @@
         android:text="@string/firstname"
         android:fontFamily="@font/open_sans_bold"
         android:textColor="@color/c4"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -61,6 +61,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="TextView"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/labelFirstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelFirstName" />
@@ -74,7 +76,7 @@
         android:text="@string/lastname"
         android:fontFamily="@font/open_sans_bold"
         android:textColor="@color/c4"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
 
@@ -85,6 +87,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="TextView"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/labelLastName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelLastName" />
@@ -98,7 +102,7 @@
         android:text="@string/email"
         android:fontFamily="@font/open_sans_bold"
         android:textColor="@color/c4"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
@@ -109,6 +113,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:text="TextView"
+        android:fontFamily="sans-serif"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/labelEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
@@ -120,10 +126,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/logout"
+        android:backgroundTint="@color/Logout"
         android:elevation="4dp"
         android:fontFamily="sans-serif"
-        android:text="Log Out"
+        android:text="@string/logout"
         android:textSize="18sp"
         app:cornerRadius="30dp"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"

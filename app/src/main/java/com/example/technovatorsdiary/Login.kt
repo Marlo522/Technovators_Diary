@@ -31,6 +31,11 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.tvAbout.setOnClickListener {
+            val intent = Intent(this, About::class.java)
+            startActivity(intent)
+        }
+
         binding.btnLogin.setOnClickListener {
             val email = binding.etUsername.text.toString().trim()
             val password = binding.etPassword.text.toString()

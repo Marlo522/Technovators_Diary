@@ -31,4 +31,6 @@
     <string name="profile">My Profile</string>
     <string name="add">Add</string>
     <string name="empty_notes">Your diary is waiting. Add your first memory</string>
+    <string name="about">About Developers</string>
+    <string name="logout">Log Out</string>
 </resources>
