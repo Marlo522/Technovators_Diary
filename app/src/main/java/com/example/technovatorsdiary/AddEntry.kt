@@ -1,5 +1,6 @@
 package com.example.technovatorsdiary
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -60,8 +61,12 @@ class AddEntry : AppCompatActivity() {
             .add(entry)
             .addOnSuccessListener {
                 Toast.makeText(this, "Entry saved", Toast.LENGTH_SHORT).show()
-                etTitle.text.clear()
-                etEntry.text.clear()
+
+                // Redirect to DashboardActivity
+                val intent = Intent(this, Dashboard::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Failed to save: ${e.message}", Toast.LENGTH_LONG).show()
