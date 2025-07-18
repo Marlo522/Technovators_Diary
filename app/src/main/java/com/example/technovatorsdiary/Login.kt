@@ -54,18 +54,22 @@ class Login : AppCompatActivity() {
                                 val firstName = document.getString("firstName") ?: ""
                                 val lastName = document.getString("lastName") ?: ""
                                 val emailDb = document.getString("email") ?: ""
+
                                 val intent = Intent(this, Dashboard::class.java)
                                 intent.putExtra("firstName", firstName)
                                 intent.putExtra("lastName", lastName)
                                 intent.putExtra("email", emailDb)
                                 startActivity(intent)
                                 finish()
-
                             } else {
-                                // User not in Firestore, sign out and show error
-                                auth.signOut()
-                                Toast.makeText(this, "Account not found in database.", Toast.LENGTH_LONG).show()
+                                // Still allow access — just show warning
+                                Toast.makeText(this, "No user info found, continuing anyway.", Toast.LENGTH_SHORT).show()
+
+                                val intent = Intent(this, Dashboard::class.java)
+                                startActivity(intent)
+                                finish()
                             }
+
                         }
                         .addOnFailureListener {
                             auth.signOut()
