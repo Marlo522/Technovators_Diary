@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechnovatorsDiary">
         <activity
+            android:name=".EditEntry"
+            android:exported="false" />
+        <activity
             android:name=".Sample"
             android:exported="false" />
         <activity
-            android:name=".activity_add_entry"
+            android:name=".AddEntry"
             android:exported="false" />
         <activity
             android:name=".About"
