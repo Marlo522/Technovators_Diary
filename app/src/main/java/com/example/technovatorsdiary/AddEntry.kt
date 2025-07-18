@@ -5,9 +5,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.technovatorsdiary.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class AddEntry : AppCompatActivity() {
 
@@ -15,7 +15,8 @@ class AddEntry : AppCompatActivity() {
     private lateinit var etEntry: EditText
     private lateinit var btnSave: Button
 
-    private lateinit var entriesRef: DatabaseReference
+    private lateinit var db: FirebaseFirestore
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,8 @@ class AddEntry : AppCompatActivity() {
         etEntry = findViewById(R.id.etentry)
         btnSave = findViewById(R.id.btnsave)
 
-        entriesRef = FirebaseDatabase.getInstance().getReference("entries")
+        db = FirebaseFirestore.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         btnSave.setOnClickListener {
             saveEntry()
@@ -35,18 +37,27 @@ class AddEntry : AppCompatActivity() {
     private fun saveEntry() {
         val title = etTitle.text.toString().trim()
         val text = etEntry.text.toString().trim()
+        val uid = auth.currentUser?.uid
 
         if (title.isEmpty() || text.isEmpty()) {
             Toast.makeText(this, "Please fill in both fields", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val entry = mapOf(
+        if (uid == null) {
+            Toast.makeText(this, "User not logged in", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        val entry = hashMapOf(
             "title" to title,
-            "text" to text
+            "text" to text,
+            "date" to Date(),
+            "uid" to uid
         )
 
-        entriesRef.push().setValue(entry)
+        db.collection("entries")
+            .add(entry)
             .addOnSuccessListener {
                 Toast.makeText(this, "Entry saved", Toast.LENGTH_SHORT).show()
                 etTitle.text.clear()
@@ -57,4 +68,3 @@ class AddEntry : AppCompatActivity() {
             }
     }
 }
-
