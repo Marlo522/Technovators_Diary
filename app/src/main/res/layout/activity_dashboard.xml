@@ -10,12 +10,11 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="8dp">
+        android:padding="8dp"
+        tools:layout_editor_absoluteX="16dp">
 
         <ImageView
             android:id="@+id/logo"
@@ -23,9 +22,9 @@
             android:layout_height="40dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/app_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvTechnovators"
@@ -36,9 +35,9 @@
             android:textColor="@color/app_background"
             android:textSize="24sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/logo"
             app:layout_constraintStart_toEndOf="@id/logo"
-            app:layout_constraintTop_toTopOf="@id/logo"
-            app:layout_constraintBottom_toBottomOf="@id/logo"/>
+            app:layout_constraintTop_toTopOf="@id/logo" />
 
         <ImageView
             android:id="@+id/profile_icon"
@@ -46,9 +45,9 @@
             android:layout_height="40dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="@id/logo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/logo"
-            app:layout_constraintBottom_toBottomOf="@id/logo"/>
+            app:layout_constraintTop_toTopOf="@id/logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
