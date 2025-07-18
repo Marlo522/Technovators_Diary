@@ -29,4 +29,6 @@
     <string name="Dom">Dom</string>
     <string name="mainentryhint">Enter your main entry here</string>
     <string name="profile">My Profile</string>
+    <string name="add">Add</string>
+    <string name="empty_notes">Your diary is waiting. Add your first memory</string>
 </resources>
