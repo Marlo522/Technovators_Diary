@@ -19,4 +19,10 @@
     <string name="cnemail">Email:</string>
     <string name="confirm">Confirm</string>
     <string name="title">Title</string>
+    <string name="mainentryhint">Write Your Thoughts</string>
+    <string name="About">About</string>
+    <string name="Developer">Developers</string>
+    <string name="Marlo">Marlo Veluz</string>
+    <string name="Dom">Dominic Madlangbayan</string>
+    <string name="Carl">Carl Mariño</string>
 </resources>
