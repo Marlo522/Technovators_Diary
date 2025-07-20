@@ -62,7 +62,7 @@
         android:layout_marginEnd="32dp"
         android:text="TextView"
         android:fontFamily="sans-serif"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/labelFirstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelFirstName" />
@@ -88,7 +88,7 @@
         android:layout_marginEnd="32dp"
         android:text="TextView"
         android:fontFamily="sans-serif"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/labelLastName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelLastName" />
@@ -114,7 +114,7 @@
         android:layout_marginEnd="32dp"
         android:text="TextView"
         android:fontFamily="sans-serif"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/labelEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
@@ -132,6 +132,8 @@
         android:text="@string/logout"
         android:textSize="18sp"
         app:cornerRadius="30dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

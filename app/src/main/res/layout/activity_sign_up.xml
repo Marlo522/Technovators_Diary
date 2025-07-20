@@ -151,22 +151,49 @@
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/c4"
         android:elevation="4dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:text="@string/signup"
         android:textColor="@android:color/white"
         app:cornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
-        app:layout_constraintVertical_bias="0.092"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <LinearLayout
+        android:id="@+id/llHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="0dp" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/tvhaveaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/haveaccount"
+            android:textColor="@color/c4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/login"
+            android:textColor="@color/c2"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
