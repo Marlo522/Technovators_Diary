@@ -6,6 +6,6 @@ data class JournalEntry(
     val title: String = "",
     val date: Date? = null,
     val text: String = "",
-    val id: String = ""  // Firestore doc ID (for update)
+    val id: String = ""  // Firestore doc ID
 )
 

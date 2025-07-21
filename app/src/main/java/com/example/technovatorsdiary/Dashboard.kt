@@ -23,7 +23,7 @@ class Dashboard : AppCompatActivity() {
     private var currentUid: String? = null
 
     companion object {
-        private const val REQUEST_EDIT_ENTRY = 1001
+        private const val REQUEST_EDIT_ENTRY = 1001 // Request code for edit entry
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,12 +32,14 @@ class Dashboard : AppCompatActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Apply padding for system bars (status bar, nav bar)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+        // Check if user is logged in
         currentUid = FirebaseAuth.getInstance().currentUser?.uid
         if (currentUid == null) {
             startActivity(Intent(this, Login::class.java))
@@ -45,12 +47,14 @@ class Dashboard : AppCompatActivity() {
             return
         }
 
+        // Get user info from intent
         val firstName = intent.getStringExtra("firstName") ?: ""
         val lastName = intent.getStringExtra("lastName") ?: ""
         val email = intent.getStringExtra("email") ?: ""
 
         db = FirebaseFirestore.getInstance()
 
+        // Go to Profile screen
         binding.profileIcon.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             intent.putExtra("firstName", firstName)
@@ -59,11 +63,13 @@ class Dashboard : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Go to AddEntry screen
         binding.noteFAB.setOnClickListener {
             val intent = Intent(this, AddEntry::class.java)
             startActivity(intent)
         }
 
+        // Set up RecyclerView and adapter
         adapter = JournalAdapter(entriesList) { entry ->
             val editIntent = Intent(this, EditEntry::class.java).apply {
                 putExtra("title", entry.title)
@@ -77,9 +83,10 @@ class Dashboard : AppCompatActivity() {
         binding.rvNotes.layoutManager = LinearLayoutManager(this)
         binding.rvNotes.adapter = adapter
 
-        loadEntries()
+        loadEntries() // Load all journal entries
     }
 
+    // Load entries from Firestore
     private fun loadEntries() {
         val uid = currentUid ?: return
 
@@ -96,21 +103,24 @@ class Dashboard : AppCompatActivity() {
                     entriesList.add(JournalEntry(title, date, text, id))
                 }
 
+                // Show empty message if no entries
                 binding.tvEmptyNotes.visibility =
                     if (entriesList.isEmpty()) View.VISIBLE else View.GONE
                 adapter.notifyDataSetChanged()
             }
             .addOnFailureListener {
+                // Show error message on failure
                 binding.tvEmptyNotes.text = "Failed to load entries."
                 binding.tvEmptyNotes.visibility = View.VISIBLE
             }
     }
 
+    // Handle result from EditEntry
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == REQUEST_EDIT_ENTRY && resultCode == RESULT_OK) {
-            loadEntries() // 🔁 Refresh dashboard after edit
+            loadEntries() // Reload entries after editing
         }
     }
 }

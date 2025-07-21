@@ -33,7 +33,9 @@ class AddEntry : AppCompatActivity() {
         btnSave.setOnClickListener {
             saveEntry()
         }
+
     }
+
 
     private fun saveEntry() {
         val title = etTitle.text.toString().trim()

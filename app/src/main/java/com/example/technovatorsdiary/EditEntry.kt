@@ -61,12 +61,12 @@ class EditEntry : AppCompatActivity() {
                 )
 
                 if (!entryId.isNullOrEmpty()) {
-                    firestore.collection("entries") // ✅ MATCHES Dashboard.kt
+                    firestore.collection("entries") // MATCHES Dashboard.kt
                         .document(entryId!!)
                         .update(updatedData)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Entry updated successfully!", Toast.LENGTH_SHORT).show()
-                            setResult(RESULT_OK) // ✅ Signal Dashboard to refresh
+                            setResult(RESULT_OK) // Signal Dashboard to refresh
                             finish()
                         }
                         .addOnFailureListener { e ->
