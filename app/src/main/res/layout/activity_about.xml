@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Title: "About" label -->
         <TextView
             android:id="@+id/tvMeet"
             android:layout_width="wrap_content"
@@ -24,15 +25,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Back button image -->
         <ImageView
             android:id="@+id/btnback"
             android:layout_width="59dp"
             android:layout_height="44dp"
             android:layout_marginTop="12dp"
+            android:src="@drawable/back_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back_button" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- App name -->
         <TextView
             android:id="@+id/tvTeam"
             android:layout_width="wrap_content"
@@ -46,6 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- "Developers" heading -->
         <TextView
             android:id="@+id/tvDevelopers"
             android:layout_width="wrap_content"
@@ -58,29 +62,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Carl's image -->
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/carlIV"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toBottomOf="@id/tvDevelopers"
+            android:src="@drawable/carl"
+            app:layout_constraintEnd_toStartOf="@+id/marloIV"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintWidth_percent="0.45"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintTop_toBottomOf="@id/tvDevelopers"
+            app:layout_constraintWidth_percent="0.45" />
 
+        <!-- Marlo's image -->
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/marloIV"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toTopOf="@id/imageView"
-            app:layout_constraintStart_toEndOf="@id/imageView"
+            android:src="@drawable/marlo"
+            app:layout_constraintTop_toTopOf="@id/carlIV"
+            app:layout_constraintStart_toEndOf="@id/carlIV"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.45"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintWidth_percent="0.45" />
 
+        <!-- Carl's name -->
         <TextView
             android:id="@+id/tvCarl"
             android:layout_width="wrap_content"
@@ -89,10 +96,11 @@
             android:fontFamily="@font/alexandria_semibold"
             android:text="@string/Carl"
             android:textColor="@color/c2"
-            app:layout_constraintTop_toBottomOf="@id/imageView"
-            app:layout_constraintStart_toStartOf="@id/imageView"
-            app:layout_constraintEnd_toEndOf="@id/imageView" />
+            app:layout_constraintTop_toBottomOf="@id/carlIV"
+            app:layout_constraintStart_toStartOf="@id/carlIV"
+            app:layout_constraintEnd_toEndOf="@id/carlIV" />
 
+        <!-- Marlo's name -->
         <TextView
             android:id="@+id/tvMarlo"
             android:layout_width="wrap_content"
@@ -101,44 +109,46 @@
             android:fontFamily="@font/alexandria_semibold"
             android:text="@string/Marlo"
             android:textColor="@color/c2"
-            app:layout_constraintTop_toBottomOf="@id/imageView2"
-            app:layout_constraintStart_toStartOf="@id/imageView2"
-            app:layout_constraintEnd_toEndOf="@id/imageView2" />
+            app:layout_constraintTop_toBottomOf="@id/marloIV"
+            app:layout_constraintStart_toStartOf="@id/marloIV"
+            app:layout_constraintEnd_toEndOf="@id/marloIV" />
 
+        <!-- Carl's role description -->
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/tvCarlDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/carlRole"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.218"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCarl" />
+            app:layout_constraintTop_toBottomOf="@id/tvCarl"
+            app:layout_constraintStart_toStartOf="@id/tvCarl"
+            app:layout_constraintEnd_toEndOf="@id/tvCarl" />
 
+        <!-- Marlo's role description -->
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/tvMarloDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/DomMarloRole"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.787"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView13" />
+            app:layout_constraintTop_toBottomOf="@id/tvMarlo"
+            app:layout_constraintStart_toStartOf="@id/tvMarlo"
+            app:layout_constraintEnd_toEndOf="@id/tvMarlo" />
 
+        <!-- Dominic's image -->
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/domIV"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toBottomOf="@id/textView14"
+            android:src="@drawable/dominic"
+            app:layout_constraintTop_toBottomOf="@id/tvMarloDesc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.45"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:layout_constraintWidth_percent="0.45" />
 
+        <!-- Dominic's name -->
         <TextView
             android:id="@+id/tvCarl2"
             android:layout_width="wrap_content"
@@ -147,20 +157,21 @@
             android:fontFamily="@font/alexandria_semibold"
             android:text="@string/Dom"
             android:textColor="@color/c2"
-            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            app:layout_constraintTop_toBottomOf="@id/domIV"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Dominic's role description -->
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:text="@string/DomMarloRole"
             android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@id/tvCarl2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

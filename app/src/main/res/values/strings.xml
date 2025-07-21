@@ -34,4 +34,6 @@
     <string name="about">About Developers</string>
     <string name="logout">Log Out</string>
     <string name="haveaccount">Already have an account?</string>
+    <string name="carlRole">Front End</string>
+    <string name="DomMarloRole"><![CDATA[Backend & Database]]></string>
 </resources>
