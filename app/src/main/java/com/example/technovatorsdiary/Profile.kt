@@ -20,6 +20,8 @@ class Profile : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //for setting up the back button and logout button
         binding.btnback.setOnClickListener {
             val intent = Intent(this, Dashboard::class.java)
             startActivity(intent)
@@ -30,11 +32,11 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        // Retrieve user data from the intent
         val firstName = intent.getStringExtra("firstName") ?: ""
         val lastName = intent.getStringExtra("lastName") ?: ""
         val email = intent.getStringExtra("email") ?: ""
-
+        // Set the user data to the TextViews
         binding.tvFirstName.text = firstName
         binding.tvLastName.text = lastName
         binding.tvEmail.text = email

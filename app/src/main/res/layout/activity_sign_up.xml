@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/lightbg"
     tools:context=".SignUp">
-
     <View
         android:id="@+id/view3"
         android:layout_width="0dp"

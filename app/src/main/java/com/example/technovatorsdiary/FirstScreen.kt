@@ -20,6 +20,7 @@ class FirstScreen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        // Set up the continue button to navigate to the Login screen
         binding.btnContinue.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
