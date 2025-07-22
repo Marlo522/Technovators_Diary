@@ -26,6 +26,11 @@ class SignUp : AppCompatActivity() {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
+        binding.btnLogin.setOnClickListener {
+            // Navigate to the Login activity when the login button is clicked
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+        }
         // Set up the sign-up button click listener
         binding.btnSignUp.setOnClickListener {
             // Retrieve user input from EditText fields
